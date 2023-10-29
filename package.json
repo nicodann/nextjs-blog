@@ -10,9 +10,15 @@
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "stripe": "^14.2.0"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "typescript": "5.2.2"
   }
 }
