@@ -1,12 +1,13 @@
-import React from 'react'
+import getStripe from "../lib/get-stripe";
 
 export default function CheckoutForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Create a Checkout Session.
-    const checkoutSession = await fetchPostJSON(
+    const checkoutSession = await fetch(
       '/api/checkout_sessions',
-      { amount: input.customDonation },
+      // { amount: input.customDonation },
+      {},
     );
   
     if ((checkoutSession).statusCode === 500) {
@@ -27,4 +28,9 @@ export default function CheckoutForm() {
     // using `error.message`.
     console.warn(error.message);
   };
+  return (
+    <form onSubmit={handleSubmit}>
+      <button type="submit">Checkout</button>
+    </form>
+  )
 }
