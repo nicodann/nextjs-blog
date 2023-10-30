@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import CheckoutForm from '../components/CheckoutForm';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -39,6 +40,10 @@ export default function Home({ allPostsData}) {
           ))}
         </ul>
 
+      </section>
+
+      <section>
+        <CheckoutForm/>
       </section>
     </Layout>
   );
