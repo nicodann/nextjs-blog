@@ -14,7 +14,7 @@ const handler =  async (req, res) => {
   const prices = await stripe.prices.list({
     limit: 4
   })
-  const products = await stripe.products.list()
+  const products = await stripe.prices.list()
   // return stripe
   // return NextResponse.json(prices.data.reverse())
   // return res.status(200).json(prices)
