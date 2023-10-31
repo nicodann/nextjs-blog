@@ -16,7 +16,7 @@ export default function Pricing() {
     console.log(data.data)
   }
   return (
-    <section style={{display:"flex", direction:"column",justifyContent:"center", alignItems:"center"}}>
+    <section style={{display:"flex", flexDirection:"column",justifyContent:"center", alignItems:"center", gap:12}}>
       <div>
         <h2>Pricing</h2>
         <p>Choose the right price!</p>
@@ -24,7 +24,7 @@ export default function Pricing() {
         <p>Check out all the information below</p>
       </div>
 
-      <div style={{display:"flex", flexWrap:"wrap"}}>
+      <div style={{display:"flex", flexWrap:"wrap", gap:20}}>
         {prices && prices.map((priceObject, i) => (
 
           <PricingCard data={priceObject} key={i} />
