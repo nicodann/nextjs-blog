@@ -19,7 +19,6 @@ const handler = async (req, res) => {
     cancel_url:'http://localhost:3000'
     //custom_fields: 
   })
-  console.log("session:",session)
 
   res.status(200).json(session.url)
   // return NextResponse.json(session.url)
