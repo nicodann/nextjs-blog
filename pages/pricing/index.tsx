@@ -27,7 +27,7 @@ export default function Pricing() {
       <div style={{display:"flex", flexWrap:"wrap", gap:20}}>
         {prices && prices.map((priceObject, i) => (
 
-          <PricingCard data={priceObject} key={i} />
+          <PricingCard priceData={priceObject} key={i} />
         )
         )}
       </div>
